@@ -12,9 +12,6 @@ books = pickle.load(open('books.pkl','rb'))
 pt = pickle.load(open('pt.pkl','rb'))
 similarity_score = pickle.load(open('similarity_score.pkl','rb'))
 
-# def compute_similarity():
-# global pt
-# global books
 
 @app.route('/')
 def index1():
@@ -31,7 +28,7 @@ def other_page():
                            image=list(popular_df['Image-URL-M'].values),
                            votes=list(popular_df['num_ratings'].values),
                            rating=rounded_ratings
-                           # rating=list(popular_df['avg-ratings'].values)
+                           
      )
 
 
@@ -50,23 +47,21 @@ def results():
 
 
 def compute_similarity(pt):
-    # Convert pivot table to numpy array
     ratings_matrix = pt.to_numpy()
 
-    # Initialize similarity score matrix
     similarity_score = np.zeros((ratings_matrix.shape[0], ratings_matrix.shape[0]))
 
-    # Iterate over each pair of books
+
     for i in range(ratings_matrix.shape[0]):
         for j in range(ratings_matrix.shape[0]):
             if i == j:
-                continue  # Skip if comparing the same book with itself
+                continue  
 
-            # Get ratings vectors for the two books
+            
             ratings_vec_i = ratings_matrix[i]
             ratings_vec_j = ratings_matrix[j]
 
-            # Compute cosine similarity manually
+            
             dot_product = np.dot(ratings_vec_i, ratings_vec_j)
             norm_vec_i = np.linalg.norm(ratings_vec_i)
             norm_vec_j = np.linalg.norm(ratings_vec_j)
@@ -76,10 +71,10 @@ def compute_similarity(pt):
 
 
 def recommend(book_name, pt, books, similarity_score):
-    # Find index of the input book name in pt
+    
     index = np.where(pt.index == book_name)[0][0]
 
-    # Get indices and similarity scores of similar items
+    
     similar_items = sorted(list(enumerate(similarity_score[index])), key=lambda x: x[1], reverse=True)[1:13]
 
     data = []
