@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NextRead|Fiction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/trending.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="banner">
+        <div class="navbar">
+<!--            <span class= "bars-btn fa fa-bars"></span>-->
+            <a href="{{ url_for('index1') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" class="logo"></a>
+            <ul>
+                <li><a href="{{ url_for('lists') }}">Books</a></li>
+                <li><a href="/trend">Trending</a></li>
+                 <li><a href="/results">Recommend</a></li>
+
+            </ul>
+        </div>
+</div>
+<h1>GENRE: FICTION</h1>
+<div class="container1">
+    <div class="row">
+        {% for i in range(book_name|length) %}
+        {% if i <100 %}
+        <div class="col-md-3">
+
+
+
+         <div class="container3">
+      <div class="image">
+        <img src="{{image[i]}}" alt="">
+      </div>
+      <div class="text">
+        <h3>{{book_name[i]}}</h3>
+          <h5>{{author[i]}}</h5>
+
+ <div id="starRating{{ i }}"></div>
+          <p>{{des[i]}}</p>
+
+      </div>
+    </div>
+            </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+        function displayStarRating(rating, containerId) {
+            const ratingContainer = document.getElementById(containerId);
+            ratingContainer.innerHTML = ''; // Clear previous stars
+
+            for (let j = 1; j <= 5; j++) {
+                const star = document.createElement('span');
+                star.className = `fa fa-star${j <= rating ? ' checked' : ''}`; // Wrap with backticks
+                ratingContainer.appendChild(star);
+            }
+        }
+
+        // Example usage: displayStarRating(3, 'starRating0');
+        // Replace 3 with your actual rating data, and 'starRating0' with the appropriate container id
+        {% for i in range(book_name|length) %}
+            displayStarRating({{ rating[i] }}, 'starRating{{ i }}');
+        {% endfor %}
+    });
+        </script>
+        {% endif %}
+{% endfor %}
+</div>
+</div>
+
+
+
+</body>
+</html>

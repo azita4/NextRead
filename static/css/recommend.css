@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+ .container1{
+    background-color:#6E4729;
+    max-width:100%;
+    text-align:center;
+    padding-top: 50px;
+    padding-bottom:50px;
+    color:white;
+ }
+ .col-3{
+
+        float: left;
+        width: 25%;
+        padding: 10px 10px;
+ }
+
+.col-3 .text-white1{
+font-weight: 600;
+font-size: 1rem;
+color: #6e4729;
+}
+
+.col-3 .text-white1{
+color: #6e4729;
+}
+.search-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 1000px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+}
+
+#search-box {
+    flex: 1;
+    width: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.btn {
+    padding: 5px;
+}
+
+
+.search-container {
+            position: relative;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            max-width: 1000px;
+            margin: 10px auto;
+            display: flex;
+            align-items: center;
+        }
+
+        #search-box {
+            flex: 1;
+            width: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+.btn {
+cursor: pointer;
+background-color: #6E4729;
+  font-size: 18px;
+  font-weight:500;
+  color: white;
+padding: 5px;
+}
+
+.btn:hover {
+  background-color: white;
+  font-size: 18px;
+  font-weight:500;
+  color: #6E4729;
+}
+
+#suggestions-container {
+position: absolute;
+top: 100%;
+left: 0;
+ width: 100%;
+ background-color: #fff;
+border: 1px solid #ccc;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ display: none;
+}
+
+
+#suggestions-container.active {
+   display: block;
+}
+
+.suggestion {
+   padding: 8px;
+   cursor: pointer;
+   border-bottom: 1px solid #ccc;
+}
+
+        .suggestion:last-child {
+            border-bottom: none;
+        }
+
+
+    .suggestion:hover {
+        background-color: #6E4729;
+        color:white;
+    }
+   .card{
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.checked{
+color:orange;
+}

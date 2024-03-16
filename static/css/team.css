@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+#team {
+    background-color: #ffcaa15c;
+    line-height: 2;
+    width: 100%;
+}
+
+.team h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #6E4729;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.team h1::after {
+    content: "";
+    height: 5px;
+    width: 200px;
+    background-color: #6E4729;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+}
+
+.column {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.member {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+.member img {
+    border-radius: 30%;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .column {
+        width: 50%;
+        flex: 0 0 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .column {
+        width: 33.33%;
+        flex: 0 0 33.33%;
+    }
+}

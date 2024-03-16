@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Read </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/team.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/search.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slide.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/genre.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='script1.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='script2.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='genre.js') }}" defer></script>
+     <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+</head>
+<body>
+<header id="header">
+     <div class="banner">
+    <div class="navbar">
+        <a href="{{ url_for('index1') }}">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo"></a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('lists') }}">Books</a></li>
+            <li><a href="{{ url_for('trend') }}">Trending</a></li>
+            <li><a href="{{ url_for('results') }}">Recommend</a></li>
+        </ul>
+    </div>
+</div>
+</header>
+     
+<!--                  MUST READ-->
+     
+     <div  class="container">
+         <h1>Want to be a reader? Start your journey to be one.</h1>
+         <button class="button1" >Explore</button>
+     </div>
+     
+<!--     GENRESS-->
+
+     <section id="genre">
+         <h1>Genres</h1>
+         <div class="genrebutton">
+             <button class="genretype1">Non-fiction</button>
+             <button class="genretype2">History</button>
+              <button class="genretype3">Fiction</button>
+             <button class="genretype4">Poetry</button>
+             <button class="genretype5">Art</button>
+             <button class="genretype6">Science</button>
+         </div>
+     </section>
+
+<!--              Quotes-->
+
+<section>
+<div class="slideshow-container">
+<h1>Quotes</h1>
+<div class="mySlides">
+  <q>Appreciation is a wonderful thing. It makes what is excellent in others belong to us as well.</q>
+  <p class="author">- Voltaire</p>
+</div>
+
+<div class="mySlides">
+  <q>There is no greater agony than bearing an untold story inside you.</q>
+  <p class="author">- Maya Angelou</p>
+</div>
+
+<div class="mySlides">
+  <q>I have not failed. I've just found 10,000 ways that won't work.</q>
+  <p class="author">- Thomas A. Edison</p>
+</div>
+
+    <div class="mySlides">
+  <q>A new day : Be open enough to see opportunities.
+     Be courageous enough to be happy.
+     Be wise enough to be grateful.</q>
+  <p class="author">- Steve Maraboli</p>
+</div>
+
+    <div class="mySlides">
+  <q>Books are the ultimate Dumpees: put them down and they’ll wait for you forever; pay attention to them and they always love you back.</q>
+  <p class="author">- John Green</p>
+</div>
+
+
+
+ <div class="mySlides">
+  <q>Good friends, good books, and a sleepy conscience: this is the ideal life.</q>
+  <p class="author">- Mark Twain</p>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<!--<div class="dot-container">-->
+<!--  <span class="dot" onclick="currentSlide(1)"></span>-->
+<!--  <span class="dot" onclick="currentSlide(2)"></span>-->
+<!--  <span class="dot" onclick="currentSlide(3)"></span>-->
+<!--</div>-->
+
+</section>
+
+
+         <!-- ABOUTUS -->
+    <section id="about">
+        <div class="aboutus">
+            <h1>About Us</h1>
+            <div class="wrapper">
+                <div class="content">
+                  <h3>NextREAD is a book recommender system which helps to discover the books you'll love!</h3>
+                    <p>When you enter a book you like, the site will analyse our huge database of real readers' favorite books to provide book recommendations and suggestions for your next read.</p>
+                </div>
+               <div class="image-section">
+                <img src="{{ url_for('static', filename='images/about.jpg')}}" alt="">
+               </div>
+            </div>
+        </div>
+    </section>
+
+
+     <section id="team">
+<div class="team">
+        <h1>Our Team</h1>
+   <div class="row">
+       <div class="column">
+            <div class="member">
+                <img src="{{url_for('static', filename='images/azita.jpg')}}" alt="Team Member 1">
+                <h2>Azita Baral</h2>
+                <p>Student<br> BSC.Csit 7th Semester <br> Butwal Multiple Campus</p>
+            </div>
+       </div>
+       <div class="column">
+            <div class="member">
+                <img src="{{url_for('static', filename='images/namuna.jpg')}}" alt="Team Member 1">
+                <h2>Namuna Acharya</h2>
+                <p>Student<br> BSC.Csit 7th Semester <br> Butwal Multiple Campus</p>
+            </div>
+       </div>
+   </div>
+</div>
+
+</section>
+
+<!--     FOOTER-->
+
+ <footer id="footer">
+        <div class="footer-container">
+            <div class="socialicons">
+                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#genre">Genre</a></li>
+                    <li><a href="#about">About us</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="footerbottom">
+            <p>Copyright &copy;2024; Designed by <span class="designer">NextRead</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>

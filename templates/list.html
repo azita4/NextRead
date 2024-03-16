@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NextRead| Book List</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/list.css') }}">
+</head>
+<body>
+<div class="banner">
+        <div class="navbar">
+<!--            <span class= "bars-btn fa fa-bars"></span>-->
+            <a href="{{url_for('index1')}}"><img src="{{ url_for('static', filename='images/logo.png') }}" class="logo"></a>
+            <ul>
+                <li><a href="/trend">Trending</a></li>
+                <li><a href="/recommend">Recommend</a></li>
+<!--                <li><a href="#">Login</a></li>-->
+
+            </ul>
+        </div>
+     </div>
+     <h1>Book Collection</h1>
+<div class="list">
+        <table border="1" id="bookTable">
+            <tr>
+                <th>S.N.</th>
+                <th>Book Title</th>
+                <th>Author Name</th>
+            </tr>
+                {%for i in range (book_name|length)%}
+                    {% if i <250 %}
+                         <tr>
+                            <td>{{i+1}}</td>
+                             <td>{{book_name[i]}}</td>
+                            <td>{{author[i]}}</td>
+                         </tr>
+                    {%endif%}
+                {%endfor%}
+
+        </table>
+<!--        <button id="nextButton" onclick="showNext()">See more</button>-->
+
+</div>
+</body>
+</html>

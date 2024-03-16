@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.container1{
+    padding-left:40px;
+    padding-top: 50px;
+    margin-left: 100px;
+ }
+
+ .col-md-3{
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+ }
+  h1{
+ color:#6E4729;
+ text-align:center;
+ }
+
+ .card-img-top{
+ height: 10vh;
+ }

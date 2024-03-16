@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>NextRead|Recommend</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/recommend.css') }}">
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{{ url_for('static', filename='recommend.js') }}" defer></script>
+</head>
+<body>
+<div class="banner">
+        <div class="navbar">
+             <a href="{{ url_for('index1') }}">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo"></a>
+
+            <ul>
+                <li><a href="{{ url_for('lists') }}">Books</a></li>
+                <li><a href="/trend">Trending</a></li>
+
+
+            </ul>
+        </div>
+
+</div>
+
+
+<div class="container1"><h1>Discover new books that you might love</h1></div>
+    <div class="row">
+        <div class="col-md-12">
+
+            <form action="/recommend" method="post">
+                <div class="search-container">
+                    <input name="user_input" type="text" id="search-box" placeholder="Enter the book you love..." value="{{ user_input }}" autocomplete="off">
+                    <input type ="submit" class="btn">
+                    <div id="suggestions-container"></div>
+                </div>
+                {% if error_message %}
+                    <div class="alert alert-danger" role="alert">
+                     <p style="color: red; text-align:center; font-size:35px;"><strong>{{ error_message }}</strong></p>
+                    </div>
+                {% endif %}
+
+            </form>
+        </div>
+
+        {% if recommended_books %}
+
+        {% for i in recommended_books %}
+        <div class="col-3" style="margin-top:50px">
+            <div class="card">
+                <div class="card-body">
+                    <img class="card-img-top" src="{{i[2]}}">
+                    <p class="text-white1">{{i[0]}} </p>
+                    <p class="text-white">Author : {{i[1]}} </p>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+</body>
+</html>

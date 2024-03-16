@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.container3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container3 img {
+ width: 200px;
+ height:270px;
+ padding: 5px 0px;
+
+}
+
+.text {
+   width:60%;
+  padding-left: 20px;
+}
+
+.text h3,h5{
+color: #6e4729;
+}
+.text h6{
+font-style: italic;
+padding: 3px 0px;
+color:#376B93;}
+
+.text p{
+font-size: 0.85rem;
+color: #6e4729;
+
+}
+
+ h1{
+ color:#6E4729;
+ text-align:center;
+ margin-top:30px;
+ font-weight: 550;
+ text-decoration: underline;
+ }
+ .checked{
+ color:orange;}

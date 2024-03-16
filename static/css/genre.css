@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.genrebutton{
+margin-left: 100px;
+margin-top: 30px;
+}
+ .genrebutton button{
+ width:30%;
+  border: 1px #296E6A solid ;
+  color: #296E6A;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 15px 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.genrebutton button:hover{
+  background-color: #296e6a;
+  color: white;
+  font-weight:600;
+}
+
+#genre h1{
+ text-align: center;
+    font-size: 40px;
+    color: #6E4729;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-top:20px;
+}
+
